@@ -1,0 +1,150 @@
+.wheel-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .outline-thick{
+        width: 35vw;
+        height: 35vw;
+        position: absolute;
+        top: -17.5vw;
+        left: -17.5vw;
+        border-radius: 50%;
+        border: dashed 13px $electric-blue;
+        animation: full-rotation 20s linear alternate infinite;
+    }
+    .outline-thin{
+        width: 15vw;
+        height: 15vw;
+        position: absolute;
+        top: -7.5vw;
+        background: $electric-blue;
+        left: -7.5vw;
+        border-radius: 50%;
+        border: solid 2px $electric-blue;
+        .bar{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            .inner{
+                width: 20px;
+                height: 7vw;
+                position: absolute;
+                left: -10px;
+                top: -7vw;
+                transform-origin: center bottom;
+                will-change: transform;
+                .cell{
+                    width: 18px;
+                    height: 10px;
+                    position: absolute;
+                    left: 1px;
+                    background: $electric-blue;
+                    border-radius: 15%;
+                    opacity: .5;
+                    &.showing{
+                        opacity: 1;
+                    }
+                    &.cell-1{
+                        top: 1px;
+                    }
+                    &.cell-2{
+                        top: 12px;
+                    }
+                    &.cell-3{
+                        top: 23px;
+                    }
+                    &.cell-4{
+                        top: 34px;
+                    }
+                    &.cell-5{
+                        top: 45px;
+                    }
+                    &.cell-6{
+                        top: 56px;
+                    }
+                    &.cell-7{
+                        top: 67px;
+                    }
+                    &.cell-8{
+                        top: 78px;
+                    }
+                    &.cell-9{
+                        top: 89px;
+                    }
+                }
+            }
+            &.bar-1{ 
+                transform: rotate(0deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .3s; 
+                }
+            }
+            &.bar-2{ 
+                transform: rotate(30deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .8s; 
+                }
+            }
+            &.bar-3{ 
+                transform: rotate(60deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .1s; 
+                }
+            }
+            &.bar-4{ 
+                transform: rotate(90deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .1s; 
+                }
+            }
+            &.bar-5{ 
+                transform: rotate(120deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .4s; 
+                }
+            }
+            &.bar-6{ 
+                transform: rotate(150deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .7s; 
+                }
+            }
+            &.bar-7{ 
+                transform: rotate(180deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .5s; 
+                }
+            }
+            &.bar-8{ 
+                transform: rotate(210deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .4s; 
+                }
+            }
+            &.bar-9{ 
+                transform: rotate(240deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite 1s; 
+                }
+            }
+            &.bar-10{ 
+                transform: rotate(270deg) translateY(-7vw); 
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .9s; 
+                }
+            }
+            &.bar-11{ 
+                transform: rotate(300deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .3s; 
+                } 
+            }
+            &.bar-12{ 
+                transform: rotate(330deg) translateY(-7vw);
+                .inner{
+                    // animation: scaleY-down .4s alternate infinite .7s; 
+                } 
+            }
+        }
+    }
+}
