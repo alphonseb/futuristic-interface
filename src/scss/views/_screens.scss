@@ -1,0 +1,80 @@
+.screens{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(#353c44, #000000);
+    opacity: 0;
+    will-change: opacity;
+    animation: fade-in .1s forwards 12.3s;
+    .screen{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        will-change: opacity, transform;
+        .rotate-wrapper{
+            will-change: transform;
+            position: absolute;
+        }
+        .wrapper{
+            position: absolute;
+            background: #fff;
+            will-change: transform;
+            border-radius: 10px;
+            overflow: hidden;
+            .inner {
+                background: rgba(0, 255, 255, 0.75);
+                color: $dark-blue;
+                width: 100%;
+                height: 100%;
+                box-shadow: inset 0px 0px 15px 10px rgba(255,255,255,0.75)
+            }
+        }
+        &.screen-1{
+            transform: scaleY(0.5);
+            animation: fade-in .3s forwards 12.4s, screen-1-translate .7s ease-out forwards 12.6s;
+            z-index: 5;
+            .wrapper{
+                animation: bobbing-y 1.5s linear infinite alternate forwards;
+                width: 20vw;
+                height: 80vh;
+                top: -40vh;
+                left: -10vw;
+            }
+            @keyframes screen-1-translate{
+                from{ transform: translateX(0) scaleY(0.5); }
+                to { transform: translateX(-35vw) scaleY(1); }
+            }
+        }
+        &.screen-2{
+            animation: fade-in .3s forwards 12.4s, screen-2-translate .7s ease-out forwards 12.7s;
+            .wrapper{
+                animation: bobbing-y 1.5s linear infinite alternate forwards .5s;
+                width: 20vw;
+                height: 38vh;
+                top: -19vh;
+                left: -10vw;
+            }
+            @keyframes screen-2-translate{
+                from{ transform: translateX(0) translateY(0); }
+                to { transform: translateX(35vw) translateY(-20vh); }
+            }
+        }
+        &.screen-3{
+            animation: fade-in .3s forwards 12.4s, screen-3-translate .7s ease-out forwards 12.8s;
+            .wrapper{
+                animation: bobbing-y 1.5s linear infinite alternate forwards .5s;
+                width: 20vw;
+                height: 38vh;
+                top: -19vh;
+                left: -10vw;
+            }
+            @keyframes screen-3-translate{
+                from{ transform: translateX(0) translateY(0); }
+                to { transform: translateX(35vw) translateY(20vh); }
+            }
+        }
+    }
+}

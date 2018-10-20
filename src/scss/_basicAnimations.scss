@@ -1,0 +1,77 @@
+@keyframes translate-up{
+    from{ transform: translateY(0); }
+    to{ transform: translateY(-80px); }
+}
+
+@keyframes fade-in{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+/* Clearer than fade-in reverse */
+@keyframes fade-out{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes up-and-out{
+    from{ opacity: 1; transform: translateY(0px); }
+    80%{ opacity: 1; transform: translateY(-100px); }
+    to{ opacity: 0; transform: translateY(-100px); }
+}
+
+@keyframes blink-in{
+    from{
+        opacity: 0;
+    }
+    33%{
+        opacity: 1;
+    }
+    66%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    85%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes blink-out{
+    from{
+        opacity: 1;
+    }
+    33%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    85%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes scaleX-down{
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+}
+
+@keyframes bobbing-y{
+    from{ transform: translateY(10px); }
+    to{ transform: translateY(-10px); }
+}

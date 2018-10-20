@@ -1,0 +1,28 @@
+.scanner-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .scanner{
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        width: calc(100vw + 80px);
+        height: 50vh;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-image: linear-gradient(to top, #00ffff, #7bfdff, #c0faff, #edf9ff, #ffffff);
+        transform-origin: center 0;
+        animation: scan-scale .1s ease reverse backwards 2.9s, scan 2s linear alternate 2 3s forwards, scan-scale .1s ease 7s forwards;
+        will-change: transform;
+    }
+}
+
+@keyframes scan{
+    from{ transform: translateZ(-80px) rotateX(180deg); }
+    to{ transform: translateZ(-80px) rotateX(0deg); }
+}
+
+@keyframes scan-scale{
+    from{ transform: translateZ(-80px) rotateX(180deg) scale(1); }
+    to{ transform: translateZ(-80px) rotateX(180deg) scale(0); }
+}
