@@ -1,0 +1,60 @@
+.links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    .link-1{
+        position: absolute;
+        .circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            will-change: opacity;
+        }
+        .circle-1{
+            top: 20vh;
+            left: 20vw;
+        }
+        .circle-2{
+            top: 45vh;
+            left: 45vw;
+        }
+        .line{
+            position: absolute;
+            background: #fff;
+            will-change: transform;
+        }
+        .line-1{
+            top: calc(20vh + 9px);
+            left: 20vw;
+            height: 2px;
+            width: calc(25vw + 9px);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        .line-2{
+            top: calc(20vh + 9px);
+            left: calc(45vw + 9px);
+            width: 2px;
+            height: 25vh;
+            transform: scaleY(0);
+            transform-origin: top; 
+        }
+        &.drawing{
+            .circle-1{
+                animation: fade-in .1s forwards;
+            }
+            .circle-2{
+                animation: fade-in .1s forwards;
+            }
+            .line-1{
+                animation: scaleX-down ease-in reverse .5s forwards;
+            }
+            .line-2{
+                animation: scaleY-down ease-out reverse .3s forwards .5s;
+            }
+        }
+    }
+}

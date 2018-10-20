@@ -25,6 +25,7 @@
             border-radius: 10px;
             overflow: hidden;
             .inner {
+                position: relative;
                 background: rgba(0, 255, 255, 0.75);
                 color: $dark-blue;
                 width: 100%;

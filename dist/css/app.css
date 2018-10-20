@@ -447,6 +447,7 @@ body {
       border-radius: 10px;
       overflow: hidden; }
       .screens .screen .wrapper .inner {
+        position: relative;
         background: rgba(0, 255, 255, 0.75);
         color: #043244;
         width: 100%;
@@ -538,7 +539,11 @@ body {
 .wheel-container {
   position: absolute;
   top: 50%;
-  left: 50%; }
+  left: 50%;
+  opacity: 0;
+  will-change: opacity;
+  -webkit-animation: fade-in .5s forwards 13.4s;
+          animation: fade-in .5s forwards 13.4s; }
   .wheel-container .outline-thick {
     width: 35vw;
     height: 35vw;
@@ -635,3 +640,56 @@ body {
       .wheel-container .outline-thin .bar.bar-12 {
         -webkit-transform: rotate(330deg) translateY(-7vw);
                 transform: rotate(330deg) translateY(-7vw); }
+
+.links {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .links .link-1 {
+    position: absolute; }
+    .links .link-1 .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      will-change: opacity; }
+    .links .link-1 .circle-1 {
+      top: 20vh;
+      left: 20vw; }
+    .links .link-1 .circle-2 {
+      top: 45vh;
+      left: 45vw; }
+    .links .link-1 .line {
+      position: absolute;
+      background: #fff;
+      will-change: transform; }
+    .links .link-1 .line-1 {
+      top: calc(20vh + 9px);
+      left: 20vw;
+      height: 2px;
+      width: calc(25vw + 9px);
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: left;
+              transform-origin: left; }
+    .links .link-1 .line-2 {
+      top: calc(20vh + 9px);
+      left: calc(45vw + 9px);
+      width: 2px;
+      height: 25vh;
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: top;
+              transform-origin: top; }
+    .links .link-1.drawing .circle-1 {
+      -webkit-animation: fade-in .1s forwards;
+              animation: fade-in .1s forwards; }
+    .links .link-1.drawing .circle-2 {
+      -webkit-animation: fade-in .1s forwards;
+              animation: fade-in .1s forwards; }
+    .links .link-1.drawing .line-1 {
+      animation: scaleX-down ease-in reverse .5s forwards; }
+    .links .link-1.drawing .line-2 {
+      animation: scaleY-down ease-out reverse .3s forwards .5s; }
