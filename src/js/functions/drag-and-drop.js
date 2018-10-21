@@ -1,3 +1,5 @@
+//Unused in final version
+
 const $draggables = [...document.querySelectorAll('.draggable')]
 let clicked = false
 

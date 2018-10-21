@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interface</title>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/app.css">
+    <link rel="stylesheet" href="dist/css/app.min.css">
 </head>
 
 <body>
@@ -71,11 +71,65 @@
             </p>
         </div>
         <div class="screens three">
-            <div class="screen screen-1 draggable">
+            <div class="screen screen-1">
                 <div class="rotate-wrapper">
                     <div class="wrapper">
                         <div class="inner">
-                            <p>Blablablab</p>
+                            <div class="content">
+                                <h2>CPU Core</h2>
+                                <div class="temperature">
+                                    <h3>Temperature</h3>
+                                    <div class="graph">
+                                        <div class="inside inside-1">
+                                            <div class="bar bar-1"></div>
+                                            <div class="bar bar-2"></div>
+                                            <div class="bar bar-3"></div>
+                                            <div class="bar bar-4"></div>
+                                            <div class="bar bar-5"></div>
+                                            <div class="bar bar-6"></div>
+                                        </div>
+                                        <div class="inside inside-2">
+                                            <div class="bar bar-1"></div>
+                                            <div class="bar bar-2"></div>
+                                            <div class="bar bar-3"></div>
+                                            <div class="bar bar-4"></div>
+                                            <div class="bar bar-5"></div>
+                                            <div class="bar bar-6"></div>
+                                        </div>
+                                        <div class="inside inside-3">
+                                            <div class="bar bar-1"></div>
+                                            <div class="bar bar-2"></div>
+                                            <div class="bar bar-3"></div>
+                                            <div class="bar bar-4"></div>
+                                            <div class="bar bar-5"></div>
+                                            <div class="bar bar-6"></div>
+                                        </div>
+                                        <div class="inside inside-4">
+                                            <div class="bar bar-1"></div>
+                                            <div class="bar bar-2"></div>
+                                            <div class="bar bar-3"></div>
+                                            <div class="bar bar-4"></div>
+                                            <div class="bar bar-5"></div>
+                                            <div class="bar bar-6"></div>
+                                        </div>
+                                        <div class="inside inside-5">
+                                            <div class="bar bar-1"></div>
+                                            <div class="bar bar-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="speed">
+                                    <h3>Clockrate</h3>
+                                    <div class="clock">
+                                        <div class="needle"></div>
+                                        <div class="bar bar-1"></div>
+                                        <div class="bar bar-2"></div>
+                                        <div class="bar bar-3"></div>
+                                        <div class="bar bar-4"></div>
+                                        <div class="bar bar-5"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -83,14 +137,86 @@
             <div class="screen screen-2">
                 <div class="rotate-wrapper">
                     <div class="wrapper">
-                        <div class="inner"></div>
+                        <div class="inner">
+                            <div class="content">
+                                <h2>Calcul Units</h2>
+                                <div class="units">
+                                    <div class="unit unit-1">
+                                        <h3>CU 1</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-2">
+                                        <h3>CU 2</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-3">
+                                        <h3>CU 3</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-4">
+                                        <h3>CU 4</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-5">
+                                        <h3>CU 5</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-6">
+                                        <h3>CU 6</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-7">
+                                        <h3>CU 7</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-8">
+                                        <h3>CU 8</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                    <div class="unit unit-9">
+                                        <h3>CU 9</h3>
+                                        <div class="hbar">
+                                            <div class="hbar__filler"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="screen screen-3">
                 <div class="rotate-wrapper">
                     <div class="wrapper">
-                        <div class="inner"></div>
+                        <div class="inner">
+                            <div class="content">
+                                <h2>Shield</h2>
+                                <div class="shield">
+                                    <div class="shield__filler displayed"></div>
+                                    <p class="blue">Active</p>
+                                    <p class="white">Inactive</p>
+                                </div>
+                                <div>
+                                    <p>Energy consumption : 2MJ</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,6 +392,7 @@
 
                     </div>
                 </div>
+                <h1>J.A.R.V.I.S</h1>
             </div>
         </div>
         <div class="links">
@@ -289,7 +416,7 @@
             </div>
         </div>
     </div>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/main.min.js"></script>
 </body>
 
 </html>

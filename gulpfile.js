@@ -8,7 +8,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
-const browserify = require('gulp-browserify');
 
 gulp.task('scripts', () => {
     gulp.src('src/js/**/*.js')
@@ -18,7 +17,6 @@ gulp.task('scripts', () => {
                 this.emit('end');
             }
         }))
-        .pipe(browserify())
         .pipe(babel())
         .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/js'))

@@ -30,7 +30,12 @@
                 color: $dark-blue;
                 width: 100%;
                 height: 100%;
-                box-shadow: inset 0px 0px 15px 10px rgba(255,255,255,0.75)
+                box-shadow: inset 0px 0px 15px 10px rgba(255,255,255,0.75);
+                .content{
+                    opacity: 0;
+                    will-change: opacity;
+                    animation: blink-in .8s forwards 13.5s;
+                }
             }
         }
         &.screen-1{
@@ -43,6 +48,202 @@
                 height: 80vh;
                 top: -40vh;
                 left: -10vw;
+                .inner{
+                    padding: 1.5rem;
+                    .content{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                        h2{
+                            margin-top: 0;
+                            text-align: center;
+                        }
+                        h3{
+                            margin-top: 0;
+                            width: 100%;
+                        }
+                        .temperature{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .graph{
+                                width: 13vw;
+                                height: 13vw;
+                                border-left: dashed 2px $white;
+                                border-bottom: dashed 2px $white;
+                                position: relative;
+                                overflow: hidden;
+                                .inside{
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    transform: translateX(13vw);
+                                    will-change: transform, opacity;
+                                    &.inside-1{
+                                        animation: translate-graph 10s linear infinite;
+                                    }
+                                    &.inside-2{
+                                        animation: translate-graph 10s linear infinite 2.3s;
+                                    }
+                                    &.inside-3{
+                                        animation: translate-graph 10s linear infinite 4.6s;
+                                    }
+                                    &.inside-4{
+                                        animation: translate-graph 10s linear infinite 6.9s;
+                                    }
+                                    &.inside-5{
+                                        animation: translate-graph 10s linear infinite 9.2s;
+                                    }
+                                    @keyframes translate-graph{
+                                        from{
+                                            opacity: 1;
+                                            transform: translateX(13vw);
+                                        }
+                                        50%{
+                                            opacity: 1;
+                                            transform: translateX(-13vw);
+                                        }
+                                        99%{
+                                            opacity: 0;
+                                            transform: translateX(-13vw);
+                                        }
+                                        100%{
+                                            opacity: 0;
+                                            transform: translateX(13vw);
+                                        }
+                                    }
+                                    .bar{
+                                        width: 10px;
+                                        position: absolute;
+                                        background: $dark-blue;
+                                        &.bar-1{
+                                            height: 5vw;
+                                            top: -5vw;
+                                            left: calc(-13vw + 5px);
+                                        }
+                                        &.bar-2{
+                                            height: 7vw;
+                                            top: -7vw;
+                                            left: calc(-13vw + 35px);
+                                        }
+                                        &.bar-3{
+                                            height: 2vw;
+                                            top: -2vw;
+                                            left: calc(-13vw + 65px);
+                                        }
+                                        &.bar-4{
+                                            height: 3vw;
+                                            top: -3vw;
+                                            left: calc(-13vw + 95px);
+                                        }
+                                        &.bar-5{
+                                            height: 10vw;
+                                            top: -10vw;
+                                            left: calc(-13vw + 125px);
+                                            background: red;
+                                        }
+                                        &.bar-6{
+                                            height: 8vw;
+                                            top: -8vw;
+                                            left: calc(-13vw + 155px);
+                                            background: red;
+                                        }
+                                    }
+                                }
+                            }
+                            margin-bottom: 5rem;
+                        }
+                        .speed{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .clock{
+                                width: 13vw;
+                                height: 13vw;
+                                border-radius: 50%;
+                                background: $white;
+                                position: relative;
+                                &::after{
+                                    content: ' ';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 50%;
+                                    bottom: 0;
+                                    left: 0;
+                                    background: rgba(0, 255, 255, 0.75);
+                                }
+                                .needle{
+                                    position: absolute;
+                                    bottom: calc(50% + 5px);
+                                    left: calc(50% - 3px);
+                                    width: 6px;
+                                    height: 5vw;
+                                    background: $dark-blue;
+                                    transform-origin: 3px calc(5vw - 3px);
+                                    transform: rotate(-90deg);
+                                    will-change: transform;
+                                    animation: needle-movement 4s infinite;
+                                    @keyframes needle-movement{
+                                        from{
+                                            transform: rotate(-90deg);
+                                        }
+                                        30%{
+                                            transform: rotate(-30deg);
+                                        }
+                                        35%{
+                                            transform: rotate(-10deg);
+                                        }
+                                        37%{
+                                            transform: rotate(-30deg);
+                                        }
+                                        50%{
+                                            transform: rotate(-70deg)
+                                        }
+                                        60%{
+                                            transform: rotate(80deg);
+                                        }
+                                        65%{
+                                            transform: rotate(70deg);
+                                        }
+                                        70%{
+                                            transform: rotate(80deg);
+                                        }
+                                        85%{
+                                            transform: rotate(-45deg);
+                                        }
+                                        to{
+                                            transform: rotate(-90deg)
+                                        }
+                                    }
+                                } 
+                                .bar{
+                                    position: absolute;
+                                    width: 4px;
+                                    height: 10px;
+                                    background: $dark-blue;
+                                    top: 50%;
+                                    left: calc(50% - 2px);
+                                    &.bar-1{
+                                        transform: rotate(-60deg) translateY(-6.5vw);
+                                    }
+                                    &.bar-2{
+                                        transform: rotate(-30deg) translateY(-6.5vw);
+                                    }
+                                    &.bar-3{
+                                        transform: rotate(0deg) translateY(-6.5vw);
+                                    }
+                                    &.bar-4{
+                                        transform: rotate(30deg) translateY(-6.5vw);
+                                    }
+                                    &.bar-5{
+                                        transform: rotate(60deg) translateY(-6.5vw);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             @keyframes screen-1-translate{
                 from{ transform: translateX(0) scaleY(0.5); }
@@ -57,6 +258,98 @@
                 height: 38vh;
                 top: -19vh;
                 left: -10vw;
+                .inner{
+                    padding: 1.5rem;
+                    .content{
+                        height: 100%;
+                        overflow-y: hidden;
+                        h2{
+                            margin-top: 0;
+                            text-align: center;
+                        }
+                        .units{
+                            .unit{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-bottom: 1rem;
+                                h3{
+                                    margin: 0;
+                                    font-size: 1.7rem;
+                                }
+                                .hbar{
+                                    width: 80%;
+                                    height: 15px;;
+                                    outline: solid 2px $white;
+                                    position: relative;
+                                    &__filler{
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        background: $white;
+                                        animation: scaleX-down .7s linear alternate infinite;
+                                        transform-origin: left;
+                                    }
+                                }
+                                &.unit-1{
+                                    .hbar__filler{
+                                        animation-delay: .3s;
+                                    }
+                                }
+                                &.unit-2{
+                                    
+                                    .hbar__filler{
+                                        animation-delay: .1s;
+                                    }
+                                }
+                                &.unit-3{
+                                    .hbar__filler{
+                                        animation-delay: .8s;
+                                    }
+                                    
+                                }
+                                &.unit-4{
+                                    .hbar__filler{
+                                        animation-delay: .2s;
+                                    }
+                                    
+                                }
+                                &.unit-5{
+                                    .hbar__filler{
+                                        animation-delay: .7s;
+                                    }
+                                    
+                                }
+                                &.unit-6{
+                                    .hbar__filler{
+                                        animation-delay: .6s;
+                                    }
+                                    
+                                }
+                                &.unit-7{
+                                    .hbar__filler{
+                                        animation-delay: .1s;
+                                    }
+                                    
+                                }
+                                &.unit-8{
+                                    .hbar__filler{
+                                        animation-delay: 0s;
+                                    }
+                                    
+                                }
+                                &.unit-9{
+                                    .hbar__filler{
+                                        animation-delay: 1s;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
             }
             @keyframes screen-2-translate{
                 from{ transform: translateX(0) translateY(0); }
@@ -71,6 +364,73 @@
                 height: 38vh;
                 top: -19vh;
                 left: -10vw;
+                .inner{
+                    padding: 1.5rem;
+                    .content{
+                        display: flex;
+                        height: 100%;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        h2{
+                            margin: 0;
+                        }
+                        p{
+                            text-align: center;
+                        }
+                        .shield{
+                            width: 9vw;
+                            height: 10vw;
+                            border: solid 10px $white;
+                            border-bottom-left-radius: 60%;
+                            border-bottom-right-radius: 60%;
+                            position: relative;
+                            overflow: hidden;
+                            cursor: pointer;
+                            &__filler{
+                                width: 100%;
+                                height: 80%;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                background: $white;
+                                opacity: 0;
+                                transform-origin: bottom;
+                                transition: transform .4s linear;
+                                will-change: transform;
+                            }
+                            p{
+                                text-align: center;
+                                color: rgba(0, 255, 255, 0.75);
+                                opacity: 1;
+                                position: absolute;
+                                top: 45%;
+                                left: 50%;
+                                font-size: 2rem;
+                                font-weight: 700;
+                                letter-spacing: 4px;
+                                text-transform: uppercase;
+                                transform: translateX(-50%) translateY(-50%);
+                                &.white{
+                                    color: $white;
+                                    opacity: 0;
+                                    font-size: 1.9rem;
+                                }
+                            }
+                            &.hiding{
+                                .shield__filler{
+                                    transform: scaleY(0);
+                                }
+                                .blue{
+                                    opacity: 0;
+                                }
+                                .white{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             @keyframes screen-3-translate{
                 from{ transform: translateX(0) translateY(0); }
