@@ -212,6 +212,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             screens[index].addEventListener('mouseover', function () {
                 links[index].classList.add('drawing');
             });
+            screens[index].addEventListener('mouseleave', function () {
+                links[index].classList.remove('drawing');
+            });
         };
 
         for (var index in screens) {

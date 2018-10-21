@@ -645,51 +645,139 @@ body {
   position: absolute;
   top: 0;
   left: 0; }
-  .links .link-1 {
+  .links .link {
     position: absolute; }
-    .links .link-1 .circle {
+    .links .link .circle {
       position: absolute;
       width: 20px;
       height: 20px;
       background: #fff;
       border-radius: 50%;
       opacity: 0;
-      will-change: opacity; }
-    .links .link-1 .circle-1 {
-      top: 20vh;
-      left: 20vw; }
-    .links .link-1 .circle-2 {
-      top: 45vh;
-      left: 45vw; }
-    .links .link-1 .line {
+      will-change: opacity;
+      -webkit-transition: opacity .2s;
+      transition: opacity .2s; }
+    .links .link .line {
       position: absolute;
       background: #fff;
-      will-change: transform; }
-    .links .link-1 .line-1 {
-      top: calc(20vh + 9px);
-      left: 20vw;
-      height: 2px;
-      width: calc(25vw + 9px);
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: left;
-              transform-origin: left; }
-    .links .link-1 .line-2 {
-      top: calc(20vh + 9px);
-      left: calc(45vw + 9px);
-      width: 2px;
-      height: 25vh;
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-      -webkit-transform-origin: top;
-              transform-origin: top; }
-    .links .link-1.drawing .circle-1 {
-      -webkit-animation: fade-in .1s forwards;
-              animation: fade-in .1s forwards; }
-    .links .link-1.drawing .circle-2 {
-      -webkit-animation: fade-in .1s forwards;
-              animation: fade-in .1s forwards; }
-    .links .link-1.drawing .line-1 {
-      animation: scaleX-down ease-in reverse .5s forwards; }
-    .links .link-1.drawing .line-2 {
-      animation: scaleY-down ease-out reverse .3s forwards .5s; }
+      will-change: transform;
+      -webkit-transition: -webkit-transform .5s;
+      transition: -webkit-transform .5s;
+      transition: transform .5s;
+      transition: transform .5s, -webkit-transform .5s; }
+  .links .link-1 .circle-1 {
+    top: 20vh;
+    left: 20vw; }
+  .links .link-1 .circle-2 {
+    top: 45vh;
+    left: 45vw;
+    -webkit-transition-delay: .8s;
+            transition-delay: .8s; }
+  .links .link-1 .line-1 {
+    top: calc(20vh + 9px);
+    left: 20vw;
+    height: 2px;
+    width: calc(25vw + 9px);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in; }
+  .links .link-1 .line-2 {
+    top: calc(20vh + 9px);
+    left: calc(45vw + 9px);
+    width: 2px;
+    height: 25vh;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s; }
+  .links .link-1.drawing .circle-1 {
+    opacity: 1; }
+  .links .link-1.drawing .circle-2 {
+    opacity: 1; }
+  .links .link-1.drawing .line-1 {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  .links .link-1.drawing .line-2 {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1); }
+  .links .link-2 .circle-1 {
+    top: 15vh;
+    left: 77vw; }
+  .links .link-2 .circle-2 {
+    top: calc(50vh - 10px);
+    left: 60vw;
+    -webkit-transition-delay: .8s;
+            transition-delay: .8s; }
+  .links .link-2 .line-1 {
+    top: calc(15vh + 9px);
+    left: calc(60vw + 9px);
+    width: calc(17vw + 9px);
+    height: 2px;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in; }
+  .links .link-2 .line-2 {
+    top: calc(15vh + 9px);
+    left: calc(60vw + 9px);
+    width: 2px;
+    height: 35vh;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s; }
+  .links .link-2.drawing .circle-1, .links .link-2.drawing .circle-2 {
+    opacity: 1; }
+  .links .link-2.drawing .line-1 {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  .links .link-2.drawing .line-2 {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1); }
+  .links .link-3 .circle-1 {
+    top: calc(50vh + 17.5vw - 13px);
+    left: 77vw; }
+  .links .link-3 .circle-2 {
+    top: calc(50vh + 17.5vw - 13px);
+    left: calc(50vw - 10px);
+    -webkit-transition-delay: .4s;
+            transition-delay: .4s; }
+  .links .link-3 .line-1 {
+    top: calc(50vh + 17.5vw - 13px + 9px);
+    left: 50vw;
+    width: 27vw;
+    height: 2px;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; }
+  .links .link-3.drawing .circle-1, .links .link-3.drawing .circle-2 {
+    opacity: 1; }
+  .links .link-3.drawing .line-1 {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
