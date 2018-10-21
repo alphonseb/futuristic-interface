@@ -9,7 +9,7 @@ I was inspired by Marvel's Iron Man and its augmented reality. You are Tony Star
 Technologies :
 --------------
 - HTML5
-- CSS3
+- CSS3 (SCSS)
 - JavaScript
 - Preprocessor: Gulp
 
